@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roudani - Zafiro Radiante</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">  <div class="light-dark-toggle-div">
+          <svg xmlns="http://www.w3.org/2000/svg" class="toggle-svg" height="16" width="16" viewBox="0 0 512 512"><path d="M448 256c0-106-86-192-192-192V448c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg>
+      </div>
+      <div class="currency-dropdown" onclick="changeCurrency()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M48.1 240c-.1 2.7-.1 5.3-.1 8v16c0 2.7 0 5.3 .1 8H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H60.3C89.9 419.9 170 480 264 480h24c17.7 0 32-14.3 32-32s-14.3-32-32-32H264c-57.9 0-108.2-32.4-133.9-80H256c17.7 0 32-14.3 32-32s-14.3-32-32-32H112.2c-.1-2.6-.2-5.3-.2-8V248c0-2.7 .1-5.4 .2-8H256c17.7 0 32-14.3 32-32s-14.3-32-32-32H130.1c25.7-47.6 76-80 133.9-80h24c17.7 0 32-14.3 32-32s-14.3-32-32-32H264C170 32 89.9 92.1 60.3 176H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H48.1z"/></svg>
+      </div>  
+    </div>
+          <div class="nav-middle">
+              <img class="nav-logo" onclick="redirectHome()" src="./static/logo.jpg"/>
+          </div>
+          <div class="nav-right">
+            <div class="dd-wrapper">
+              <div class="dropdown">
+                <div class="svg-container" onclick="toggleDropdown()">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="mobile-bars" height="20" width="20" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>              </div>
+                <div class="dropdown-content">
+                  <a class="dd-link" href="/">Home</a><br/>
+                  <a class="dd-link" href="our-story.html">Our Story</a><br/>
+                  <a class="dd-link" href="#">Products</a>
+                </div>
+              </div>                
+              </div>
+  
+            <a class="nav-link" id="nav-link1" href="/">Home</a>
+            <a class="nav-link" id="nav-link2" href="our-story.html">Story</a>
+            <a class="nav-link last" id="nav-link3"  href="/">Products</a>      
+          </div>
+      </nav>
+      <div class="watch-container">
+        <div class="image-showcase-container">
+            <div class="image-showcase">
+                <div class="selected-image-container">
+                    <img class="selected-image" src="./static/showcase1.png"></img>
+                </div>
+                <div class="available-imgs-div">
+                    <div class="selected-little-img-div" id="img-1 img" onclick="setSelectedImg(this)">
+                        <img class="available-image " src="./static/showcase1.png"/>
+                    </div>
+                    <div class="little-img-div" id="img-2 img" onclick="setSelectedImg(this)">
+                        <img class="available-image" src="./static/showcase2.png"/>
+                    </div>
+                    <div class="little-img-div" id="img-3 img" onclick="setSelectedImg(this)">
+                        <img class="available-image" src="./static/showcase3.png"/>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="text-cta-div">
+            <span class="text-cta-header">Zafiro Radiante</span>
+            <div class="zafiro-info-div">
+              <div class="zafiro-price-div">
+                <span class="section-sub red-glow" style="text-decoration: line-through; color: red;">189,90€</span>
+              </div>
+              <div class="zafiro-price-div">
+                <span class="section-sub" id="price">169,90€</span>
+              </div> 
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, quod. Sit doloremque ipsa praesentium autem quisquam repellendus, sequi eius, temporibus, debitis consectetur vitae natus omnis dicta tenetur dolore in vel?         
+            </div>
+            <div class="cta-btn-div">
+                <button class="buy-btn" onclick="redirectCheckout()">
+                    Buy Now
+                  </button>
+                  <button class="buy-btn-blue">
+                    Add To Cart
+                  </button>
+            </div>    
+        </div>  
+      </div>
+      <div class="characteristics-container">
+        <div class="characteristics-div">
+          <div class="img-container">
+            <img src="./static/header-bg.jpg" class="characteristics-img"/>
+          </div>
+          <span class="span-right">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste nam omnis pariatur sequi cupiditate fugit illum, autem rerum earum dicta, corrupti, perspiciatis commodi odio soluta ad harum totam dolorum expedita!</span>
+        </div>
+        <div class="characteristics-div">
+          <span class="span-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste nam omnis pariatur sequi cupiditate fugit illum, autem rerum earum dicta, corrupti, perspiciatis commodi odio soluta ad harum totam dolorum expedita!</span>
+          <div class="img-container">
+            <img src="./static/caracteristicas-2.jpg" class="characteristics-img"/>
+          </div>
+        </div>
+        <div class="characteristics-div">
+          <div class="img-container">
+            <img src="./static/caracteristicas-3.jpg" class="characteristics-img"/>
+          </div>
+          <span class="span-right">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste nam omnis pariatur sequi cupiditate fugit illum, autem rerum earum dicta, corrupti, perspiciatis commodi odio soluta ad harum totam dolorum expedita!</span>
+        </div>
+      </div>          
+      <script>
+
+  const setSelectedImg = function (clickedElement) {
+    const allLittleImages = document.querySelectorAll(".selected-little-img-div");
+    allLittleImages.forEach(img => img.classList.remove("selected-little-img-div"));
+    allLittleImages.forEach(img => img.classList.add("little-img-div"));
+
+    clickedElement.classList.add("selected-little-img-div");
+
+    // You can add code here to update the selected image based on the clicked element
+    const selectedImageSrc = clickedElement.querySelector(".available-image").src;
+    const selectedImage = document.querySelector(".selected-image");
+
+    // Apply transition by changing opacity
+    selectedImage.style.opacity = 0;
+
+    setTimeout(() => {
+      selectedImage.src = selectedImageSrc;
+      selectedImage.style.opacity = 1;
+    }, 100); // Use the same duration as the transition
+  };
+
+  let darkMode = true;
+
+  document.querySelector(".light-dark-toggle-div").addEventListener("click", function () {
+  console.log("Button clicked");
+  const navbar = document.querySelector(".navbar");
+  const navLinks = document.querySelectorAll(".nav-link");
+  const navLogo = document.querySelector(".nav-logo");
+  const toggleButton = document.querySelector(".light-dark-toggle-div");
+  const toggleSVG = document.querySelector(".toggle-svg");
+  const littleImgDiv = document.querySelectorAll(".little-img-div");
+  const selectedImage = document.querySelector(".selected-little-img-div")
+  const buyButton = document.querySelector(".buy-btn")
+  const buyButtonBlue = document.querySelector(".buy-btn-blue")
+
+  darkMode = !darkMode;
+  console.log(darkMode);
+
+  const body = document.body;
+  if (darkMode) {
+    body.style.backgroundColor = "black";
+    body.style.color = "white";
+    navbar.style.backgroundColor = "black";
+    navbar.style.borderBottom = "2px solid white";
+    navLogo.src = "./static/logo.jpg";
+    navLinks.forEach(link => link.style.color = "white");
+    toggleButton.style.backgroundColor = "white";
+    toggleButton.style.border = "2px solid white";
+    toggleSVG.style.fill = "black";
+    selectedImage.style.border = "2px solid white";
+
+
+    littleImgDiv.forEach(div => {
+      div.style.border = "2px solid white";
+    });
+
+  } else {
+    body.style.backgroundColor = "white";
+    body.style.color = "black";
+    navbar.style.backgroundColor = "white";
+    navbar.style.borderBottom = "2px solid black";
+    navLogo.src = "./static/logo-light.jpg";
+    navLinks.forEach(link => link.style.color = "black");
+    toggleButton.style.backgroundColor = "black";
+    toggleButton.style.border = "2px solid white";
+    toggleSVG.style.fill = "white";
+    selectedImage.style.border = "2px solid black"
+
+    littleImgDiv.forEach(div => {
+      div.style.border = "2px solid black";
+    });
+
+  }
+});
+
+      const redirectHome = function() {
+            window.location.href = "/";
+       }
+
+       function redirectCheckout() {
+    window.location.href = "./checkout-zafiro-radiante.html";
+}
+      
+
+
+
+const euroSVG = '<svg xmlns="http://www.w3.org/2000/svg" height="16" width="10" viewBox="0 0 320 512"><path d="M48.1 240c-.1 2.7-.1 5.3-.1 8v16c0 2.7 0 5.3 .1 8H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H60.3C89.9 419.9 170 480 264 480h24c17.7 0 32-14.3 32-32s-14.3-32-32-32H264c-57.9 0-108.2-32.4-133.9-80H256c17.7 0 32-14.3 32-32s-14.3-32-32-32H112.2c-.1-2.6-.2-5.3-.2-8V248c0-2.7 .1-5.4 .2-8H256c17.7 0 32-14.3 32-32s-14.3-32-32-32H130.1c25.7-47.6 76-80 133.9-80h24c17.7 0 32-14.3 32-32s-14.3-32-32-32H264C170 32 89.9 92.1 60.3 176H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H48.1z"/></svg>';
+  const dollarSVG = '<svg xmlns="http://www.w3.org/2000/svg" height="16" width="10" viewBox="0 0 320 512"><path d="M160 0c17.7 0 32 14.3 32 32V67.7c1.6 .2 3.1 .4 4.7 .7c.4 .1 .7 .1 1.1 .2l48 8.8c17.4 3.2 28.9 19.9 25.7 37.2s-19.9 28.9-37.2 25.7l-47.5-8.7c-31.3-4.6-58.9-1.5-78.3 6.2s-27.2 18.3-29 28.1c-2 10.7-.5 16.7 1.2 20.4c1.8 3.9 5.5 8.3 12.8 13.2c16.3 10.7 41.3 17.7 73.7 26.3l2.9 .8c28.6 7.6 63.6 16.8 89.6 33.8c14.2 9.3 27.6 21.9 35.9 39.5c8.5 17.9 10.3 37.9 6.4 59.2c-6.9 38-33.1 63.4-65.6 76.7c-13.7 5.6-28.6 9.2-44.4 11V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V445.1c-.4-.1-.9-.1-1.3-.2l-.2 0 0 0c-24.4-3.8-64.5-14.3-91.5-26.3c-16.1-7.2-23.4-26.1-16.2-42.2s26.1-23.4 42.2-16.2c20.9 9.3 55.3 18.5 75.2 21.6c31.9 4.7 58.2 2 76-5.3c16.9-6.9 24.6-16.9 26.8-28.9c1.9-10.6 .4-16.7-1.3-20.4c-1.9-4-5.6-8.4-13-13.3c-16.4-10.7-41.5-17.7-74-26.3l-2.8-.7 0 0C119.4 279.3 84.4 270 58.4 253c-14.2-9.3-27.5-22-35.8-39.6c-8.4-17.9-10.1-37.9-6.1-59.2C23.7 116 52.3 91.2 84.8 78.3c13.3-5.3 27.9-8.9 43.2-11V32c0-17.7 14.3-32 32-32z"/></svg>';
+  const poundSVG = '<svg xmlns="http://www.w3.org/2000/svg" height="16" width="10" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M112 160.4c0-35.5 28.8-64.4 64.4-64.4c6.9 0 13.8 1.1 20.4 3.3l81.2 27.1c16.8 5.6 34.9-3.5 40.5-20.2s-3.5-34.9-20.2-40.5L217 38.6c-13.1-4.4-26.8-6.6-40.6-6.6C105.5 32 48 89.5 48 160.4V224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H48v44.5c0 17.4-4.7 34.5-13.7 49.4L4.6 431.5c-5.9 9.9-6.1 22.2-.4 32.2S20.5 480 32 480H288c17.7 0 32-14.3 32-32s-14.3-32-32-32H88.5l.7-1.1C104.1 390 112 361.5 112 332.5V288H224c17.7 0 32-14.3 32-32s-14.3-32-32-32H112V160.4z"/></svg>';
+
+  const currencies = [
+      { name: "Euro", icon: euroSVG },
+      { name: "Dollar", icon: dollarSVG },
+      { name: "Pound", icon: poundSVG }
+    ];
+    let currentCurrencyIndex = 0;
+
+    function changeCurrency() {
+    const priceTag = document.querySelector(".section-sub")
+      currentCurrencyIndex = (currentCurrencyIndex + 1) % currencies.length;
+      const selectedCurrency = currencies[currentCurrencyIndex];
+
+      console.log("Selected Currency:", selectedCurrency.name);
+
+      document.querySelector(".currency-dropdown").innerHTML = selectedCurrency.icon;
+      if (selectedCurrency.name === currencies[0].name) {
+    priceTag.innerHTML = "169,90€";
+  } else if (selectedCurrency.name === currencies[1].name) {
+    priceTag.innerHTML = "$186,17";
+  } else {
+    priceTag.innerHTML = "145,41£";
+  }
+    }
+
+      </script>
+  </body>
+</html>

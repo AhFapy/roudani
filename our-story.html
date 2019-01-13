@@ -8,16 +8,29 @@
 </head>
 <body>
     <nav>
-        <div class="nav-left">
-            <img class="nav-logo" onclick="redirectHome()" src="./static/logo.jpg"/>
-        </div>
-        <div class="nav-right">
-          <a class="nav-link" href="/">Home</a>
-          <a class="nav-link" href="">Follow Us!</a>
-          <a class="nav-link" href="/">Products</a>
-        </div>
-    </nav>
-            <div class="story-div">
+        <div class="nav-left"></div>
+          <div class="nav-middle">
+              <img class="nav-logo" onclick="redirectHome()" src="./static/logo.jpg"/>
+          </div>
+          <div class="nav-right">
+            <div class="dd-wrapper">
+              <div class="dropdown">
+                <div class="svg-container" onclick="toggleDropdown()">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="mobile-bars" height="20" width="20" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>              </div>
+                <div class="dropdown-content">
+                  <a class="dd-link" href="/">Home</a><br/>
+                  <a class="dd-link" href="our-story.html">Our Story</a><br/>
+                  <a class="dd-link" href="#">Products</a>
+                </div>
+              </div>                
+              </div>
+  
+            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="our-story.html">Our Story</a>
+            <a class="nav-link last" href="/">Products</a>
+          </div>
+      </nav>
+              <div class="story-div">
                 <div class="story-wrapper">
                     <span class="section-header story-header">Our Story</span>
                     <span class="story-text">
