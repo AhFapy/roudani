@@ -9,11 +9,11 @@
 <body>
     <nav>
         <div class="nav-left">
-            <img class="nav-logo" src="./static/logo.jpg"/>
+            <img class="nav-logo" onclick="redirectHome()" src="./static/logo.jpg"/>
         </div>
         <div class="nav-right">
           <a class="nav-link" href="/">Home</a>
-          <a class="nav-link" href="">Follow Us!</a>
+          <a class="nav-link" href="our-story.html">Our Story</a>
           <a class="nav-link" href="/">Products</a>
         </div>
     </nav>
@@ -100,6 +100,11 @@
         </footer>
         
   <script>
+      const redirectHome = function() {
+            window.location.href = "/";
+       }
+
+
     let currentIndex = 0;
     const sliderTrack = document.getElementById('sliderTrack');
     const slides = document.querySelectorAll('.slide');

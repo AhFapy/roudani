@@ -9,7 +9,7 @@
 <body>
     <nav>
         <div class="nav-left">
-            <img class="nav-logo" src="./static/logo.jpg"/>
+            <img class="nav-logo" onclick="redirectHome()" src="./static/logo.jpg"/>
         </div>
         <div class="nav-right">
           <a class="nav-link" href="/">Home</a>
@@ -27,12 +27,13 @@
                         Since the launch, Roudani Watches has experienced remarkable growth, with a commitment to transforming the ordinary into the extraordinary and ensuring that each timepiece becomes a timeless everyday accessory. 
                     </span>    
                 </div>
-                <div class="story-img">
-                </div>
             </div>
 
             <div class="story-bottom">
                 <img class="story-2" src="./static/mystory2.jpeg"/>
+                <img class="story-3" src="./static/mystory3.jpg"/>
+                <img class="story-4" src="./static/mystory4.jpg"/>
+                <img class="story-5" src="./static/photo_5798540715771412514_y.jpg">
             </div>
     <footer>
         <div class="footer-top">
@@ -42,5 +43,11 @@
         </div>
         <img class="footer-logo" src="./static/footer-img.png"/>
       </footer>
+
+      <script>
+        const redirectHome = function() {
+            window.location.href = "/";
+        }
+      </script>
 </body>
 </html>
