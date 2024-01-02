@@ -22,6 +22,10 @@ nav {
   z-index: 1000; /* Ensure the nav is above other elements */
 }
 
+.dropdown {
+  display: none;
+}
+
 .landing-page-header {
   padding-top: 12vh; 
   height: 100vh;
@@ -31,16 +35,20 @@ nav {
 }
 
 .nav-left {
-    width: 50%;
+  width: 33.33%;
+  height: 100%;
+}
+
+.nav-middle {
+    width: 33.33%;
     height: 100%;
     display: flex;
-    padding-left: 2rem;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
 }
 
 .nav-right {
-    width: 50%;
+    width: 33.33%;
     height: 100%;
     display: flex;
     justify-content: end;
@@ -48,12 +56,80 @@ nav {
 }
 
 .nav-link {
-  font-family: sans-serif;
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
   color: black;
   margin-right: 1rem;
+}
+
+.last {
+  margin-right: 2rem;
+}
+
+.mobile-bars {
+  display: none;
+}
+
+@media (max-width: 725px) {
+  .nav-link {
+    margin-right: 0.5rem;
+    font-size: 90%;
+  }
+  .last {
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 570px) {
+  .nav-link {
+    display: none;
+  }
+
+  .dd-wrapper {
+    margin-right: 10vw;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 5rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+  }
+
+  .dd-link {
+    text-decoration: none;
+    color: black;
+    opacity: 1;
+    font-weight: 400;
+    font-family: sans-serif;
+    margin-left: 5px;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .svg-container {
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .svg-container:hover {
+  }
+
+  .mobile-bars {
+    fill: black;
+    display: block;    
+  }
+
 }
 
 
@@ -74,15 +150,13 @@ nav {
     background-color: white;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
 }
 
 .header-cta {
   font-size: 4.2rem;
+  font-weight: 300;
   margin-left: 2.2rem;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 400;
 }
 .slight-b {
   font-weight: 400;
@@ -97,14 +171,89 @@ nav {
     background-repeat: no-repeat;
 }
 
+@media(max-width: 1250px) {
+  .header-cta {
+    font-size: 3.5rem;
+  }
+}
+
+@media(max-width: 1050px) {
+  .header-cta {
+    font-size: 3rem;
+  }
+}
+
+@media(max-width: 900px) {
+  .header-cta {
+    font-size: 2.5rem;
+  }
+}
+
 .wrapper{
     top: 50%;
     left: 50%;
+    margin-left: 10rem;
     transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media(max-width: 760px) {
+    .landing-page-header {
+      flex-direction: column;
+    }
+  
+    .landing-cta {
+      height: 60%;
+      width: 100%;
+      align-items: center;
+      flex-direction: column;
+  }
+
+  .header-img {
+    height: 40%;
+    width: 100%;
+  }
+  
+    .header-cta {
+      margin-left: 0;
+    }
+  
+    .wrapper {
+      margin-left: 15rem;
+    }
+    
+  }
+
+  @media(max-width: 550px) {
+    .landing-page-header {
+      flex-direction: column;
+    }
+  
+    .landing-cta {
+      height: 75%;
+      width: 100%;
+      align-items: center;
+      flex-direction: column;
+  }
+  
+    .header-cta {
+      margin-left: 0;
+      font-size: 2rem;
+      text-align: center;
+    }
+  
+    .wrapper {
+      margin-left: 15rem;
+    }
   }
   
   .link-wrapper{
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
  .btn-a{
@@ -121,6 +270,9 @@ nav {
     letter-spacing: 1px;
     border: 3px solid #00009c;
     transition: all .35s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .icon{
@@ -205,6 +357,7 @@ nav {
   border-radius: 100%;
   border: none;
   transition: all 0.2s ease-in-out;
+  font-family: sans-serif;
 }
 
 .slider-control:hover {
@@ -237,6 +390,8 @@ nav {
   align-items: center;
 }
 
+
+
 .svg-wrapper {
   background: #C0C0C0;
   width: 6rem;
@@ -247,10 +402,6 @@ nav {
   align-items: center;
 }
 
-.pros-svg {
-  height: 3rem;
-  width: 5rem;
-}
 
 .advantage-wrapper {
   width: 15vw;
@@ -259,6 +410,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: red;
 }
 
 .pro-disclaimer {
@@ -267,6 +419,26 @@ nav {
   font-size: 1.2rem;
   margin-top: 1rem;
   text-align: center;
+}
+
+@media(max-width: 1000px) {
+  .pros-margin {
+    margin-bottom: 5vh;
+  }
+
+  .pros-div {
+    flex-direction: column;
+    height: auto;
+  }
+  .advantage-wrapper {
+    margin-bottom: 1vh;
+    width: 100%;
+  }
+}
+
+.pros-svg {
+  height: 3rem;
+  width: 5rem;
 }
 
 .pro-text {
