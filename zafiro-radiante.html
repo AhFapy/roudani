@@ -196,19 +196,22 @@ const euroSVG = '<svg xmlns="http://www.w3.org/2000/svg" height="16" width="10" 
     let currentCurrencyIndex = 0;
 
     function changeCurrency() {
-    const priceTag = document.querySelector(".section-sub")
+    const priceTag = document.getElementById("price")
+    const cutTag = document.querySelector(".section-sub")
       currentCurrencyIndex = (currentCurrencyIndex + 1) % currencies.length;
       const selectedCurrency = currencies[currentCurrencyIndex];
-
       console.log("Selected Currency:", selectedCurrency.name);
 
       document.querySelector(".currency-dropdown").innerHTML = selectedCurrency.icon;
       if (selectedCurrency.name === currencies[0].name) {
     priceTag.innerHTML = "169,90€";
+    cutTag.innerHTML = "189,90€";
   } else if (selectedCurrency.name === currencies[1].name) {
     priceTag.innerHTML = "$186,17";
+    cutTag.innerHTML = "$208.23";
   } else {
     priceTag.innerHTML = "145,41£";
+    cutTag.innerHTML = "163.37£";
   }
     }
 

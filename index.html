@@ -227,18 +227,21 @@ document.querySelector(".light-dark-toggle-div").addEventListener("click", funct
 
     function changeCurrency() {
     const priceTag = document.getElementById("price")
+    const cutTag = document.querySelector(".section-sub")
       currentCurrencyIndex = (currentCurrencyIndex + 1) % currencies.length;
       const selectedCurrency = currencies[currentCurrencyIndex];
-
       console.log("Selected Currency:", selectedCurrency.name);
 
       document.querySelector(".currency-dropdown").innerHTML = selectedCurrency.icon;
       if (selectedCurrency.name === currencies[0].name) {
     priceTag.innerHTML = "169,90€";
+    cutTag.innerHTML = "189,90€";
   } else if (selectedCurrency.name === currencies[1].name) {
     priceTag.innerHTML = "$186,17";
+    cutTag.innerHTML = "$208.23";
   } else {
     priceTag.innerHTML = "145,41£";
+    cutTag.innerHTML = "163.37£";
   }
     }
 
