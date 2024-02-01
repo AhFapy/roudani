@@ -108,8 +108,8 @@
 
         <footer>
           <div class="footer-top">
+            <a href="our-story.html" class="footer-link">Our Story</a>
           </div>
-          <img class="footer-logo" src="./static/logo.jpg"/>
         </footer>
         
   <script>
@@ -130,13 +130,11 @@ let darkMode = true;
 document.querySelector(".light-dark-toggle-div").addEventListener("click", function() {
   console.log("Button clicked");
   const navbar = document.querySelector(".navbar");
-  const navLinks = document.querySelector(".navLink");
   const navLogo = document.querySelector(".nav-logo");
-  const toggleButton = document.querySelector(".light-dark-toggle-div")
-  const toggleSVG = document.querySelector(".toggle-svg")
+  const toggleButton = document.querySelector(".light-dark-toggle-div");
+  const toggleSVG = document.querySelector(".toggle-svg");
   const footerLogo = document.querySelector(".footer-logo");
-  const footerLink = document.querySelectorAll(".footer-link")
-
+  const footerLinks = document.querySelectorAll(".footer-link");
 
   darkMode = !darkMode;
   console.log(darkMode);
@@ -152,13 +150,15 @@ document.querySelector(".light-dark-toggle-div").addEventListener("click", funct
     document.getElementById("nav-link2").style.color = "white";
     document.getElementById("nav-link3").style.color = "white";
     toggleButton.style.backgroundColor = "white";
-    toggleButton.border = "2px solid white"
+    toggleButton.style.border = "2px solid white";
     toggleSVG.style.fill = "black";
     footerLogo.src = "./static/logo.jpg";
-    footerLink.style.color = "black";
     
+    footerLinks.forEach(link => {
+      link.style.color = "white";
+    });
 
-
+    document.querySelector("footer").style.borderTop = "2px solid white";
   } else {
     body.style.backgroundColor = "white";
     body.style.color = "black";
@@ -169,12 +169,18 @@ document.querySelector(".light-dark-toggle-div").addEventListener("click", funct
     document.getElementById("nav-link2").style.color = "black";
     document.getElementById("nav-link3").style.color = "black";
     toggleButton.style.backgroundColor = "black";
-    toggleButton.border = "2px solid white"
+    toggleButton.style.border = "2px solid white";
     toggleSVG.style.fill = "white";
     footerLogo.src = "./static/logo-light.jpg";
-    footerLink.style.color = "white";
+    
+    footerLinks.forEach(link => {
+      link.style.color = "black";
+    });
+
+    document.querySelector("footer").style.borderTop = "2px solid black";
   }
 });
+
 
       const redirectHome = function() {
             window.location.href = "/";
